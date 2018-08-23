@@ -5,28 +5,32 @@
 //greeting should return the string "Hello, "
 //plus the value of the name parameter.
 
-//Code here
+function greeting(name){
+  return `Hello, ${ name }`;
+}
 
 //////////////////PROBLEM 2////////////////////
 
 //Rewrite the function greeting as a function expression.
 //Name it newGreeting.
 
-//Code Here
+const newGreeting = function(name){
+    return `Hello, ${ name }`;
+}
 
 //////////////////PROBLEM 3////////////////////
 
 //Rewrite the function greeting as an arrow function.
 //Name it finalGreeting.
 
-//Code Here
+const finalGreeting = name => `Hello, ${ name }`;
 
 //////////////////PROBLEM 4////////////////////
 
 //Create an array called groceries with the values
 //"apples", "milk", "eggs", "bread"
 
-//Code Here
+const groceries = ['apples', 'milk', 'eggs', 'bread'];
 
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
@@ -34,7 +38,12 @@
 //If the array does not contain "chocolate", add "chocolate".
 //doubleCheck should return the array.
 
-//Code Here
+function doubleCheck(array){
+  if (array !== 'chocolate'){
+    array.push('chocolate');
+    return array;
+  }
+}
 
 //////////////////PROBLEM 5////////////////////
 
@@ -43,21 +52,28 @@
 //name (a string), color: (a string), age (a number),
 //and goodBoy (a boolean).
 
-//Code Here
+const dog = {
+    name: 'Zeus',
+    color: 'black',
+    age: 5,
+    goodBoy: true
+};
 
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
 
-//Code Here
+const devMountainClassPet = dog.name;
 
 //Add a method to dog called bark.
 //The value of bark should be a function that returns the string "Woof woof".
 
-//Code Here
+dog.bark = function(){
+  return 'Woof woof';
+}
 
 //Store the result of invoking the bark method in a variable called ruff.
 
-//Code Here
+const ruff = dog.bark();
 
 //////////////////PROBLEM 6////////////////////
 
@@ -70,7 +86,15 @@
 
 //Return mySum.
 
-//Code Here
+function looper(array){
+ var mySum = 0; //forced to use var... why?
+ for(i=0;i<array.length;i++){
+   if (array[i] %2 !== 0 || array[i] >= 100){
+      mySum += array[i];
+   }
+ }
+ return mySum;
+}
 
 //////////////////PROBLEM 7////////////////////
 
